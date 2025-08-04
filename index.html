@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File-Lisa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+  <h1>📡 File-Lisa</h1>
+  <div class="branding">Private Wi-Fi File Sharing</div>
+  <div class="container">
+    <button onclick="location.href='send.html'">Send</button>
+    <button onclick="location.href='receive.html'">Receive</button>
+  </div>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+</body>
+</html>

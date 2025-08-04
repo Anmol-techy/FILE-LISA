@@ -1,0 +1,136 @@
+:root {
+  --bg-light: #eef2f3;
+  --bg-dark: #1e1e2f;
+  --text-light: #333;
+  --text-dark: #f0f0f0;
+  --card-light: #ffffff;
+  --card-dark: #2c2c3e;
+  --button-bg: #007BFF;
+  --button-hover: #0056b3;
+  --success-bg: #28a745;
+  --success-hover: #218838;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
+
+.container {
+  margin: 60px auto;
+  padding: 40px;
+  max-width: 500px;
+  background-color: var(--card-light);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .container {
+  background-color: var(--card-dark);
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--button-bg);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+input[type="file"] {
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+}
+
+ul#users {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul#users li {
+  padding: 12px;
+  margin: 8px auto;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  max-width: 300px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+body.dark-mode ul#users li {
+  background-color: #3c3c4f;
+  color: white;
+}
+
+ul#users li:hover {
+  background-color: #dcdcdc;
+  transform: scale(1.03);
+}
+
+body.dark-mode ul#users li:hover {
+  background-color: #505067;
+}
+
+a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--success-bg);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: var(--success-hover);
+}
+
+.toggle-theme {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  padding: 8px 14px;
+  font-size: 14px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toggle-theme:hover {
+  background-color: #495057;
+}
+
+.branding {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: inherit;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send File | File-Lisa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="index.html" class="🔙-button">
+  </a>
+
+  <h1>📤 Send a File</h1>
+  <div class="branding">Private Wi-Fi File Sharing</div>
+  <div class="container">
+    <input type="file" id="fileInput" multiple>
+    <button onclick="uploadFile()">Upload</button>
+    <div id="userList" style="display:none;">
+      <h3>Select a user to send the files:</h3>
+      <ul id="users"></ul>
+    </div>
+  </div>
+
+  <button class="toggle-theme bottom-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
